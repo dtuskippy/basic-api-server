@@ -13,8 +13,18 @@ const DATABASE_URL = process.env.NODE_ENV === 'test'
   ? 'sqlite:memory'
   : process.env.DATABASE_URL;
 
+
+
+
 // instantiates database (create an instance/singleton)
-const sequelizeDatabase = new Sequelize(DATABASE_URL);
+const sequelizeDatabase = new Sequelize(DATABASE_URL, {
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
+});
 
 // create DrinksModel with our Schema
 const DrinksModel = drinksSchema(sequelizeDatabase, DataTypes);
