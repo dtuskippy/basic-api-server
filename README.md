@@ -6,7 +6,7 @@
 
     * Server testing
     * Middleware testing
-    * CI/CD with Github and Heroku
+    * CI/CD with Github and Heroku (incl. Postgres sync)
     * Created 2 SQL data models using the Sequelize libary and Postgres database
 
 ### Setup
