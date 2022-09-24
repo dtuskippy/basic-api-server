@@ -5,26 +5,41 @@
 ### Author: Alan Chelko
 
     * Server testing
+    * Middleware testing
     * CI/CD with Github and Heroku
+    * Created 2 SQL data models using the Sequelize libary and Postgres database
 
 ### Setup
-    * PORT: 3002
+
+    * PORT: 3001
 
 ### Deployed server
-    *
+
+    * Heroku: [chelko-basic-api-server-prod](https://dashboard.heroku.com/apps/chelko-basic-api-server-prod/)
+
 ### Running the app
+
     * npm start
     * Endpoint: '/'
-        * returns 'Hello World'
-    * Endpoint: '/bad'
-        * returns object with 500 error
-    * Enpoint: '/*' (i.e. anything other than '/bad')
-        * returns object with 404 error
+        * Returns 'Hello, welcome to the World of Meat and Drinks!'
+    * Endpoint: '/meat'
+        * Create a record with POST
+        * Read a record (for all, or for single record with ID) with GET
+        * Update a record (using ID) with PUT
+        * Delete a record (using ID) with DELETE
+    * Endpoint: '/drinks'
+        * Create a record with POST
+        * Read a record (for all, or for single record with ID) with GET
+        * Update a record (using ID) with PUT
+        * Delete a record (using ID) with DELETE
+    *  Enpoint: '/*' (i.e. anything other than '/bad')
+        * Returns object with 404 error
 
 ### Tests
+
     * npm test
 
 
-### UML: Basic Express Server -- Lab 02 UML
+### UML: Basic API Server -- Lab 03 UML
 
-![CI-CD Process](images/server-deployment-practice.png)
+![UML - Lab 03](images/basic-api-server.png)
